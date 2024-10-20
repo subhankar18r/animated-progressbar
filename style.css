@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+.input {
+  height: 40px;
+  display: flex;
+}
+.input input {
+  height: 100%;
+  width: 200px;
+  text-indent: 10px;
+}
+.input button {
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+}
+.box {
+  height: 160px;
+  width: 160px;
+  position: relative;
+}
+.outer {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2),
+    -10px -10px 15px rgba(255, 255, 255, 0.8);
+}
+.inner {
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.8);
+}
+#value {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+svg {
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
