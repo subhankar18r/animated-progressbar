@@ -3,6 +3,7 @@ const circle = document.querySelector("circle");
 let circumference = circle.getTotalLength();
 let inpValue = document.querySelector("input");
 let count = 0;
+circle.style.strokeDashoffset = circumference;
 
 function showProgressBar() {
   if (inpValue.value < 0) inpValue.value = 0;
@@ -12,6 +13,7 @@ function showProgressBar() {
     circumference - (inpValue.value / 100) * circumference;
 
   let timer = setInterval(() => {
+    if (inpValue.value == 0) value.innerHTML = "0%";
     if (count == inpValue.value) {
       clearInterval(timer);
       count = 0;
